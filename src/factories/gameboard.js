@@ -41,7 +41,18 @@ const Gameboard = () => {
         }
         
     }
-    return {grid, placeShip, receiveAttack}
+
+    const allSunk = () => {
+        for(let i = 0; i <shipList.length; i++){
+            if (!shipList[i].ship.isSunk()){
+                return false
+            }
+        }
+
+        return true;
+    };
+
+    return {grid, placeShip, receiveAttack, allSunk}
 }
 
 module.exports = Gameboard

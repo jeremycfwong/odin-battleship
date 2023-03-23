@@ -55,5 +55,15 @@ describe('Gameboard functions', () =>{
         expect(demoShip.getHitCount()).toBe(1);        
     });
 
+    it('got hit at 50th node with a ship in it', () => {
+        testBoard.placeShip(demoShip,50,'horizontal')
+        testBoard.receiveAttack(50)
+        testBoard.receiveAttack(51)
+        testBoard.receiveAttack(52)
+        testBoard.receiveAttack(53)
+        testBoard.receiveAttack(54)
+
+        expect(testBoard.allSunk()).toBe(true);        
+    });
 })
 
