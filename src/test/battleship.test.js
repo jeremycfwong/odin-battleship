@@ -3,8 +3,9 @@ import Ship from "../factories/battleship";
 
 test('Battleship hit function', () => {
     var testShip = new Ship(5)
+    testShip.hit()
     
-    expect(testShip.hit()).toBe(1);
+    expect(testShip.getHitCount()).toBe(1);
 })
 
 test('Battleship sunk after hit', () => {

@@ -2,15 +2,17 @@ const Ship = (length) =>{
     var hitCount = 0
 
     const hit = () => {
-        hitCount += 1;
-        return hitCount;
+        return hitCount += 1;
     }
 
     const isSunk = () => {
         return (hitCount == length)
     }
+
+    const getHitCount = () => hitCount
     
-    return {length, hit, isSunk}
+    
+    return {length, getHitCount, hit, isSunk}
 }
 
 module.exports = Ship
