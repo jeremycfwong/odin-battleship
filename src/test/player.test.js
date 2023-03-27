@@ -1,4 +1,4 @@
-import Player from '../factories/player'
+import {Player, Computer} from '../factories/player'
 import Ship from '../factories/battleship'
 
 describe('Player Function', () => {
@@ -22,3 +22,25 @@ describe('Player Function', () => {
         expect(player2.playerBoard.grid[50].hasHit).toBe(true)
     });
 })
+
+describe('Computer Function', () => {
+    let computer;
+    let demoShip
+
+    beforeEach(() => {
+        computer = new Computer();
+        demoShip = new Ship(5)
+    });
+
+    
+    it('Place Ship', () =>{
+        computer.placeShip(demoShip)
+        computer.placeShip(demoShip)
+        computer.placeShip(demoShip)
+        computer.placeShip(demoShip)
+        computer.placeShip(demoShip)
+        
+        expect(computer.computerBoard.grid[computer.locations[24]].hasShip).toBe(true)
+    });
+})
+
