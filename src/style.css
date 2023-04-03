@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+}
+
+.node {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+}
+
+.row {
+    display: flex;
+}
+
+#header {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    background-color: rgb(95, 158, 158);
+}
+
+#headerTitle {
+    grid-column-start: 2;
+    justify-self: center;
+    align-self: center;
+}
+
+.board-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+#content{
+    margin: 2rem 0;
+}
+
+
+@media (max-width: 1100px) {
+    .node {
+        height: 25px;
+        width: 25px;
+    }
+}

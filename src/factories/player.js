@@ -1,6 +1,6 @@
-const { Template } = require("webpack");
-const Ship = require("./battleship");
-const Gameboard = require("./gameboard");
+import Ship from "./battleship";
+import Gameboard from "./gameboard";
+
 
 const Player = (name) => {
     var playerBoard = new Gameboard();
